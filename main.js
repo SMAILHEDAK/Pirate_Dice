@@ -12,13 +12,13 @@ function editNames() {
     player2 = prompt("Change Player2 name"); 
     reg1 = player1.match(/^[a-z 0-9]+$/i);
     reg2 = player2.match(/^[a-z 0-9]+$/i);
-    if(player1 == reg1 && player2 == reg2){
+    if(player1 == reg1 && player2 == reg2 && player1 != player2){
       document.querySelector("p.Player1").innerHTML = player1;
       document.querySelector("p.Player2").innerHTML = player2; 
     }
     else
     {
-      alert("Please enter a name that doesn't contain a symbol.");
+      alert("Please enter a name that doesn't contain a symbol and/or not similar names.");
     }
 }
 
